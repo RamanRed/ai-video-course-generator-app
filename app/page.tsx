@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <div>
       <h1>Fuck u nigga</h1>
       <Button>Yeah baby</Button>
+      <UserButton></UserButton>
     </div>
   );
 }
