@@ -286,7 +286,7 @@ export async function POST(req: NextRequest) {
         {
           role: "system",
           content:
-            "Return only valid JSON. Do not include markdown, commentary, or keys outside the requested schema.",
+            "Return only valid JSON. Do not include markdown, commentary, or keys outside the requested schema. Generate detailed, thorough, lecture-quality content.",
         },
         {
           role: "user",
@@ -297,6 +297,7 @@ export async function POST(req: NextRequest) {
         },
       ],
       temperature: 0.3,
+      max_tokens: 16000,
     });
 
     const rawResult = chatCompletion.choices[0]?.message?.content;
